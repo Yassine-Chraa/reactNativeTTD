@@ -5,6 +5,8 @@ import renderer from 'react-test-renderer';
 import App from '../App';
 import Home from '../src/screens/Home';
 import { fetchUserDetails } from '../src/models/user';
+import CustomModule from '../src/nativeModules/CustomModule';
+import {NativeModules} from 'react-native';
 
 
 describe("Main App",()=>{
