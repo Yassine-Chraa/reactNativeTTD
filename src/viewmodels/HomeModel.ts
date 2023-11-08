@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { fetchUserDetails } from "../models/user";
 import UserInterface from "../interfaces/UserInterface";
+import CustomModule from "../nativemodules/CustomModule";
+
 
 const useHomeModel = ()=>{
     const [userDetails,setUserDetails] = useState<UserInterface>();
@@ -12,6 +14,7 @@ const useHomeModel = ()=>{
     
     useEffect(()=>{
         fetchData();
+        //CustomModule.createCalendarEvent('test','location');
     },[])
     return {userDetails};
 }
